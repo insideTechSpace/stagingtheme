@@ -3,8 +3,8 @@
   "component": false,
   "license_url": null,
   "about_url": null,
-  "authors": "Vishwas Adiga, Alexander Barrios Modified by DPN MEDiA WORKS",
-  "theme_version": "2",
+  "authors": "Kodular Material Discourse Theme Modified by DPN MEDiA WORKS",
+  "theme_version": "3.2.0",
   "minimum_discourse_version": "3.1.0.beta1",
   "assets": {
     "CascadiaCode": "assets/CascadiaCode.woff2",
@@ -37,5 +37,5 @@
     }
   },
   "modifiers": {},
-  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+  "learn_more": "https://dpnmediaworks.com"
 }
