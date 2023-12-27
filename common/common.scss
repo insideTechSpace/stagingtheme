@@ -33,7 +33,6 @@ body.dark-knight {
 #toggle-hamburger-menu,
 #current-user,
 #toggle-messages-menu {
-    border-radius: 3600px;
     margin: 0 3px;
 }
 
@@ -515,7 +514,6 @@ aside blockquote {
 }
 
 .discourse-tags > a::before {
-    border-radius: 3600px;
     margin-bottom: 1px;
 }
 
@@ -524,7 +522,6 @@ aside blockquote {
     background: rgba(200, 200, 200, 0.1);
     width: 35px;
     height: 35px;
-    border-radius: 3600px;
     text-align: center;
     color: #666 !important;
     transition: background 0.2s;
