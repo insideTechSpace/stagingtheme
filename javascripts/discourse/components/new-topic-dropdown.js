@@ -25,7 +25,7 @@ export default DropdownSelectBoxComponent.extend({
       {
         id: "new_discussion",
         name: "New Topic",
-        description: "Start a mew discussion",
+        description: "Start a new discussion",
         icon: "comment",
       },
     ];
