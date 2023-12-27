@@ -8,6 +8,8 @@ export default DropdownSelectBoxComponent.extend({
   classNames: ["new-topic-dropdown"],
 
   selectKitOptions: {
+    icons: ["plus"],
+    showFullTitle: true,
     showFullTitle: false,
     autoFilterable: false,
     filterable: false,
@@ -17,7 +19,7 @@ export default DropdownSelectBoxComponent.extend({
   
   content: computed(function () {
     
-    const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
+    //const hideForNewUser = this.currentUser && this.currentUser.trust_level > 0;
     
     const items = [
       {
@@ -47,6 +49,7 @@ export default DropdownSelectBoxComponent.extend({
         action: Composer.CREATE_TOPIC,
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: categoryId,
+        tags: tags,
       });
     }
   
