@@ -26,7 +26,7 @@ const replaceIcons = (api) => {
     api.replaceIcon("at", "mdo-alternate_email");
     api.replaceIcon("backward", "mdo-fast_rewind");
     api.replaceIcon("ban", "mdo-block");
-    api.replaceIcon("bars", "mdo-menu");
+    api.replaceIcon("bars", "sidepanel");
     api.replaceIcon("bed", "mdo-bed");
     api.replaceIcon("bell-slash", "mdo-notifications_off");
     api.replaceIcon("bell", "mdo-notifications");
@@ -266,7 +266,7 @@ const replaceIcons = (api) => {
     api.replaceIcon("user", "mdo-person");
     api.replaceIcon("users", "mdo-group");
     api.replaceIcon("wrench", "mdo-build");
-
+    
     console.warn(`NOTICE: The old-css based icon renderer has been deprecated for this theme. 
 All icons should be replaced using the new SVG based icon renderer.
 
