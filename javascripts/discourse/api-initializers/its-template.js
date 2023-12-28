@@ -15,13 +15,6 @@ export default {
           if (template) {
             this.set("topicListItemContents", htmlSafe(template(this)));
           }
-            // Add a filter to exclude topics with specific tags
-  const excludedTags = ["featured"]; // Replace 'tagtoblock' with the tag you want to exclude
-  const filteredTopics = this.topics.filter((topic) => {
-    return !excludedTags.some((tag) => topic.tags.includes(tag));
-  });
-
-  this.set("topics", filteredTopics);
         },
       });
       api.onPageChange((url, title) => {
