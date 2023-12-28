@@ -70,7 +70,7 @@ const replaceIcons = (api) => {
     api.replaceIcon("d-drop-expanded", "mdo-arrow_drop_down");
     api.replaceIcon("d-liked", "mdo-favorite");
     api.replaceIcon("d-muted", "mdo-notifications_off");
-    api.replaceIcon("d-post-share", "mdo-link");
+    api.replaceIcon("d-post-share", "mdo-external");
     api.replaceIcon("d-regular", "mdo-notifications_none");
     api.replaceIcon("d-topic-share", "mdo-link");
     api.replaceIcon("d-tracking", "mdo-notifications");
@@ -266,6 +266,7 @@ const replaceIcons = (api) => {
     api.replaceIcon("user", "mdo-person");
     api.replaceIcon("users", "mdo-group");
     api.replaceIcon("wrench", "mdo-build");
+    
 
     console.warn(`NOTICE: The old-css based icon renderer has been deprecated for this theme. 
 All icons should be replaced using the new SVG based icon renderer.
