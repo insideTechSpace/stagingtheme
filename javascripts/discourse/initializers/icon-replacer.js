@@ -1,6 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
-const replaceIcons = (api) => {
+function initIcons(api) {
     api.replaceIcon("address-book", "mdo-perm_contact_calendar");
     api.replaceIcon("address-card", "mdo-badge");
     api.replaceIcon("adjust", "mdo-contrast");
@@ -266,12 +266,6 @@ const replaceIcons = (api) => {
     api.replaceIcon("user", "mdo-person");
     api.replaceIcon("users", "mdo-group");
     api.replaceIcon("wrench", "mdo-build");
-    
-    console.warn(`NOTICE: The old-css based icon renderer has been deprecated for this theme. 
-All icons should be replaced using the new SVG based icon renderer.
-
-More information at: https://github.com/discourse/discourse-alt-icons#contributing`);
-
 }
 
 export default {
