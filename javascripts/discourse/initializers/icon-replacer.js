@@ -70,7 +70,7 @@ const replaceIcons = (api) => {
     api.replaceIcon("d-drop-expanded", "mdo-arrow_drop_down");
     api.replaceIcon("d-liked", "mdo-favorite");
     api.replaceIcon("d-muted", "mdo-notifications_off");
-    api.replaceIcon("d-post-share", "mdo-external");
+    api.replaceIcon("d-post-share", "mdo-link");
     api.replaceIcon("d-regular", "mdo-notifications_none");
     api.replaceIcon("d-topic-share", "mdo-link");
     api.replaceIcon("d-tracking", "mdo-notifications");
