@@ -1,5 +1,2 @@
 en: 
-  sidebar: 
-    welcome: "Welcome"
-    all_badges: "all badges"
-  created: "Created"
+  js.created: "Created"
