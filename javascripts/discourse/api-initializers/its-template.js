@@ -6,14 +6,16 @@ export default {
   name: "itspace",
   initialize() {
     withPluginApi("0.8.7", (api) => {
-      // Use same template on Desktop and MobileView
+      // Use default template-list-item if the route is not defined in shouldUseCustomTemplate()
       api.modifyClass("component:topic-list-item", {
         pluginId: "its-template",
 
         renderTopicListItem() {
           const template = findRawTemplate("list/custom-topic-list-item");
-          if (template && this._shouldUseCustomTemplate()) {
+          if (template) {
             this.set("topicListItemContents", htmlSafe(template(this)));
+          } else {
+            this.set("topicListItemContents", htmlSafe(this.get("defaultTopicListItemContents")));
           }
         },
 
