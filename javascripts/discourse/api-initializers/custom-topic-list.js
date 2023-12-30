@@ -1,4 +1,4 @@
-import { withPluginApi } from "discourse/lib/plugin-api";
+/*import { withPluginApi } from "discourse/lib/plugin-api";
 import { findRawTemplate } from "discourse-common/lib/raw-templates";
 import { htmlSafe } from "@ember/template";
 
@@ -28,4 +28,4 @@ export default {
       });
     });
   },
-};
+};*/
