@@ -9,7 +9,7 @@
     </label>
   </td>
 {{/if}}
-
+<div class="custom-ts">
 <div class="main-link clearfix">
   <span class="link-top-line">
     <div class="byline">
@@ -81,4 +81,5 @@
     </a>
     {{raw "list/custom-posts-count-column" topic=topic}}
   </div>
+</div>
 </div>
