@@ -13,7 +13,13 @@ export default {
           const isLatestPostsPage = api.container.lookup("router:main").currentRouteName === "discovery.latest";
 
           let templateName = isLatestPostsPage ? "list/custom-topic-list-item" : "components/topic-list-item";
-          const template = findRawTemplate(templateName);
+          let template = findRawTemplate(templateName);
+
+          // Fallback to the original Discourse template if neither custom nor default is available
+          if (!template) {
+            templateName = "list/topic-list-item";
+            template = findRawTemplate(templateName);
+          }
 
           if (template) {
             this.set("topicListItemContents", htmlSafe(template(this)));
