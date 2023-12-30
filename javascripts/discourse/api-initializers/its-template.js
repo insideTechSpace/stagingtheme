@@ -27,7 +27,7 @@ export default {
             "discovery.new",
             "discovery.top",
             "tag.show",
-            "category.show",
+           // "category.show",
           ];
           return allowedRoutes.includes(currentRoute);
         },
