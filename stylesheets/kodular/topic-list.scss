@@ -20,8 +20,9 @@
 }
 
 //Custom Social Topic Lists
-.custom-ts {
-    .topic-list-body {
+body.custom-tl {
+.topic-list {
+    .topic-list-body . {
       display: block;
       border: none;
     }
@@ -238,3 +239,4 @@
       }
     }
   }
+}

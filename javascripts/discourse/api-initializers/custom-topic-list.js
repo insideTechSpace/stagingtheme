@@ -11,6 +11,14 @@ export default {
 
         renderTopicListItem() {
           const isLatestPostsPage = api.container.lookup("router:main").currentRouteName === "discovery.latest";
+            
+            // Add custom body class to Discourse latest page
+            if (isLatestPostsPage) {
+                const bodyElement = document.querySelector('body');
+                if (bodyElement) {
+                  bodyElement.classList.add('custom-tl');
+                }
+              }
 
           let templateName = isLatestPostsPage ? "list/custom-topic-list-item" : "components/topic-list-item";
           let template = findRawTemplate(templateName);
