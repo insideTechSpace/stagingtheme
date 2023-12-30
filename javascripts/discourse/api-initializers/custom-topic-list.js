@@ -12,12 +12,7 @@ export default {
         renderTopicListItem() {
           const isLatestPostsPage = api.container.lookup("router:main").currentRouteName === "discovery.latest";
 
-          let templateName = "list/default-topic-list-item";
-
-          if (isLatestPostsPage) {
-            templateName = "list/custom-topic-list-item";
-          }
-
+          let templateName = isLatestPostsPage ? "list/custom-topic-list-item" : "components/topic-list-item";
           const template = findRawTemplate(templateName);
 
           if (template) {
