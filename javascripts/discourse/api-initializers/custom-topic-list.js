@@ -2,7 +2,7 @@
 api.registerInitializer('injectCustomTopicListItem', {
     name: 'inject-custom-topic-list-item',
     initialize() {
-      const currentRoute = api.container.lookup('router:main').currentRouteName;
+      const currentRoute = Discourse.Route.current().name;
   
       // Define the routes where the custom topic list item should be used
       const customRoutes = [
@@ -16,11 +16,13 @@ api.registerInitializer('injectCustomTopicListItem', {
   
       // Define the template to be used based on the condition
       const templateName = useCustomTopicListItem
-        ? 'list/custom-topic-list-item'
-        : 'list/default-topic-list-item';
+        ? 'components/custom-topic-list-item'
+        : 'components/default-topic-list-item';
   
-      // Inject the template into the topic list
-      api.addTemplate('list/topic-list-item', `theme/${templateName}`);
+      // Modify the TopicListItemClass to use the selected template
+      api.modifyClass('component:topic-list-item', {
+        tagName: templateName
+      });
     }
   });
   
