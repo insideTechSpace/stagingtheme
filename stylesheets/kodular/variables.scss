@@ -1,12 +1,16 @@
 // Global
 
 :root {
-    --d-button-border-radius: #{$border_radius_button};
-    --d-default-border-radius: #{$border_radius_em};
-    --d-input-border-radius: #{$border_radius_input};
-    --d-select-body-border-radius: #{$border_radius_select_body};
-    --d-avatar-border-radius: #{$border_radius_avatar};
     --font-family: 'Jost'
+    --d-button-border-radius: 2em;
+    --d-input-border-radius: 2em;
+    --d-default-border-radius: 1em;
+    --d-select-body-border-radius: 0.75em;
+    --d-element-bg-rgb: 41, 65, 86;
+    --d-element-bg: rgba(var(--d-element-bg-rgb), 0.3);
+    --d-element-bg-hover: rgba(var(--d-element-bg-rgb), 0.8);
+    --d-modal-backdrop: rgba(91, 112, 131, 0.4);
+    --map-tiles-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
   }
   
   /* Mixins */
