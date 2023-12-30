@@ -17,7 +17,7 @@ export default {
 
           // Fallback to the original Discourse template if neither custom nor default is available
           if (!template) {
-            templateName = "list/topic-list-item";
+            templateName = isLatestPostsPage ? "list/latest-topic-list-item" : "list/topic-list-item";
             template = findRawTemplate(templateName);
           }
 
