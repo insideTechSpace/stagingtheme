@@ -79,6 +79,6 @@
     <a class="latest-activity-tlist {{view.likesHeat}}" href="{{topic.lastPostUrl}}">
       {{~format-date topic.bumpedAt format="tiny" noTitle="true"~}} {{d-icon "history"}}
     </a>
-    {{raw "list/posts-count-column" topic=topic}}
+    {{raw "list/custom-posts-count-column" topic=topic}}
   </div>
 </div>
