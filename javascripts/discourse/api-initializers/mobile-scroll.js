@@ -1,7 +1,7 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
-  name: "discourse-navigation-controls",
+  name: "mobile-scroll-down",
 
   initialize() {
     withPluginApi("0.8.13", (api) => {
