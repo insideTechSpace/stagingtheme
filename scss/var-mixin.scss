@@ -1,11 +1,15 @@
 // Global
 
 :root {
-    --d-button-border-radius: #{$border_radius_button};
-    --d-default-border-radius: #{$border_radius_em};
-    --d-input-border-radius: #{$border_radius_input};
-    --d-select-body-border-radius: #{$border_radius_select_body};
-    --d-avatar-border-radius: #{$border_radius_avatar};
+    --d-button-border-radius: 2em;
+    --d-default-border-radius: 1em;
+    --d-input-border-radius: 2em;
+    --d-select-body-border-radius: 0.75em;
+    --d-avatar-border-radius: 50%;
+    --avatar-post-width: calc(60px + 1em + var(--topic-body-width) + (var(--topic-body-width-padding) * 2) + (12px * 2));
+    --wo-avatar-width: calc(var(--topic-body-width) + (var(--topic-body-width-padding) * 2) + (12px * 2));
+    --topic-post-full-width: calc(60px + 1em + var(--topic-body-width) + (var(--topic-body-width-padding) * 2) + (12px * 2) + 83px);
+    --posts-filter-width: calc(60px + 1em + var(--topic-body-width) + (var(--topic-body-width-padding) * 2) + (12px * 2) - 2em);
   }
   
   /* Mixins */
