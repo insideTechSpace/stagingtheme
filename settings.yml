@@ -19,4 +19,17 @@ topic_image_backdrop_blur:
 topic_image_backdrop_brightness: 
   default: "0.65"
   description: "Change the topic_image_backdrop brightness size. Set a lower value for less bright backdrop image."
+  right_sidebar_blocks_enabled:
+  type: bool
+  default: false
+  description: "Enabling this will add Right Sidebar Blocks theme component support and replace the original fkb panel with it."
+
+right_sidebar_below_fkb_panel:
+  type: bool
+  default: false
+  description: "Enabling this will add Right Sidebar Blocks theme component below the FKB Panel."
   
+custom_sidebar_enabled:
+  type: bool
+  default: false
+  description: "Custom sidebar content for visitor."
