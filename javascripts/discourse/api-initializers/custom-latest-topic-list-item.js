@@ -20,7 +20,7 @@ export default {
         pluginId: "ltli-template",
 
         renderLatestTopicListItem() {
-          const customTemplate = api.rawTemplates["list/custom-topic-list-item"];
+          const customTemplate = api.rawTemplates["list/custom-latest-topic-list-item"];
           if (customTemplate) {
             this.set(
               "topicListItemContents", 
