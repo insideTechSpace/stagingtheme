@@ -7,7 +7,7 @@ export default {
   initialize() {
     withPluginApi("0.8.7", (api) => {
       // Replace the latest-topic-list-item template
-      api.replaceWith("components/latest-topic-list-item", "list/custom-latest-topic-list-item", {
+      api.replaceRawTemplate("components/latest-topic-list-item", "list/custom-latest-topic-list-item", {
         id: "latest-topic-list-item-override"
       });
 
