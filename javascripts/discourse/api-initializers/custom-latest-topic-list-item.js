@@ -7,6 +7,7 @@ export default {
   name: "ltlitemp",
   initialize() {
     withPluginApi("0.8.7", (api) => {
+      // Fetch the theme ID
       const themeId = api.container.lookup("site-settings:main").theme_id;
 
       // Override the latest-topic-list-item template
@@ -19,7 +20,7 @@ export default {
         pluginId: "ltli-template",
 
         renderLatestTopicListItem() {
-          const customTemplate = api.container.lookup("template:list/custom-topic-list-item");
+          const customTemplate = api.rawTemplates["list/custom-topic-list-item"];
           if (customTemplate) {
             this.set(
               "topicListItemContents", 
