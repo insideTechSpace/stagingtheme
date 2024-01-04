@@ -11,8 +11,8 @@ export default {
         pluginId: "lts-template",
 
         renderLatestTopicListItem() {
-          const customTemplate = api.container.lookup("template:list/custom-topic-list-item");
-          if (customTemplate) {
+            const template = findRawTemplate("list/custom-topic-list-item");
+            if (customTemplate) {
             this.set(
               "topicListItemContents", 
               htmlSafe(customTemplate(this))
