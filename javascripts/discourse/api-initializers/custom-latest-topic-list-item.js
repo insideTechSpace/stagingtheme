@@ -1,18 +1,26 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { htmlSafe } from "@ember/template";
 import { schedule } from "@ember/runloop";
+import { getOwner } from "@ember/application";
 
 export default {
-  name: "ltsspace",
+  name: "ltlitemp",
   initialize() {
     withPluginApi("0.8.7", (api) => {
+      const themeId = api.container.lookup("site-settings:main").theme_id;
+
       // Override the latest-topic-list-item template
+      api.rawTemplate("connectors/latest-topic-list-item/default.hbs", `
+        {{raw-html topicListItemContents}}
+      `, { id: `latest-topic-list-item-override-${themeId}` });
+
+      // Modify the component to use the custom template
       api.modifyClass("component:latest-topic-list-item", {
-        pluginId: "lts-template",
+        pluginId: "ltli-template",
 
         renderLatestTopicListItem() {
-            const template = findRawTemplate("list/custom-topic-list-item");
-            if (customTemplate) {
+          const customTemplate = api.container.lookup("template:list/custom-topic-list-item");
+          if (customTemplate) {
             this.set(
               "topicListItemContents", 
               htmlSafe(customTemplate(this))
@@ -26,8 +34,6 @@ export default {
           }
         },
       });
-
-      // ... your other modifications here
     });
   },
 };
