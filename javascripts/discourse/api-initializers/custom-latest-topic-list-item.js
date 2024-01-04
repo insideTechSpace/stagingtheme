@@ -27,7 +27,9 @@ export default {
               htmlSafe(customTemplate(this))
             );
             schedule("afterRender", () => {
-              // ... your existing code here
+                if (this.isDestroyed || this.isDestroying) {
+                    return;
+                  }
             });
           } else {
             // If the custom template doesn't exist, fall back to the default behavior
